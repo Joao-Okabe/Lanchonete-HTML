@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var menu, lanche, bebida, xtudo=10.00, xegg=9.00, xsalada=8.00, bauru=5.00, coca=5.00, fanta=4.00, guar=4.00, tuba=3.00; 
+        var qtdxtudo=0, qtdxegg=0, qtdxsalada=0, qtdbauru=0, qtdcoca=0, qtdguar=0, qtdfanta=0, qtdtuba=0, conta=0;
+        do{
+            
+            menu=parseInt(prompt("Menu Principal:\n 1-lanches\n 2-bebidas\n 3-conta\n 0-sair\n"));
+            if(menu == 1)
+                do{
+                    lanche = parseInt(prompt("Selecione o seu Lanche:\n X-tudo(1):R$10,00\n X-Egg(2): R$9,00\n X-Salada(3):R$8,00\n Bauru(4): R$5,00 "));
+                    if(lanche == 1){conta += xtudo; qtdxtudo++}
+                    else if(lanche == 2){conta += xegg; qtdxegg++}
+                    else if(lanche == 3){conta += xsalada; qtdxsalada++}
+                    else if(lanche == 4){conta += bauru; qtdbauru++}
+                    }while(lanche != 0);
+            
+            else if(menu == 2)
+                do{
+                    bebida=parseInt(prompt("Selecione sua Bebida:\n Coca-Cola(1): R$5,00\n Guaraná(2): R$4,00\n Fanta(3): R$4,00\n Tubaina(4): R$3,00\n  Voltar(0)"))
+                    if(bebida == 1){conta+=coca; qtdcoca++;}
+                    else if(bebida == 2){conta+=guar; qtdguar++;}
+                    else if(bebida == 3){conta+=fanta;qtdfanta++;}
+                    else if(bebida == 4){conta+=tuba; qtdtuba++;}
+                }while(menu != 0);
+            else if(menu == 3)
+                    alert("Sua conta é de: \n"+"x-tudo: "+qtdxtudo+"\nx-egg: "+qtdxegg+"\nx-salada: "+qtdxsalada+"\nbauru: "+qtdbauru+"\ncoca-cola: "+qtdcoca+"\nGuaraná: "+qtdguar+"\nFanta: "+qtdfanta+"\nTubaína:"+qtdtuba +"\n"+"Sua conta é de: "+conta);                    
+        }while(menu!=0);
+
+
+    </script>
+</body>
+</html>
